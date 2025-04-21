@@ -1,0 +1,39 @@
+### Calcular punto de equilibrio válido
+POST http://localhost:8080/api/calcular
+Content-Type: application/json
+
+{
+  "costosFijos": 5000,
+  "precioVenta": 50,
+  "costosVariables": 30
+}
+
+### Calcular con costo variable mayor al precio
+POST http://localhost:8080/api/calcular
+Content-Type: application/json
+
+{
+  "costosFijos": 5000,
+  "precioVenta": 30,
+  "costosVariables": 50
+}
+
+### Calcular con valores negativos
+POST http://localhost:8080/api/calcular
+Content-Type: application/json
+
+{
+  "costosFijos": -1000,
+  "precioVenta": 50,
+  "costosVariables": 30
+}
+
+### Calcular con división por cero
+POST http://localhost:8080/api/calcular
+Content-Type: application/json
+
+{
+  "costosFijos": 5000,
+  "precioVenta": 30,
+  "costosVariables": 30
+}
